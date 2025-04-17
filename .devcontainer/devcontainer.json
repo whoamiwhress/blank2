@@ -1,0 +1,36 @@
+{
+    "name": "SystemdSlayer",
+    "image": "codercom/code-server:latest",
+    "customizations": {
+      "vscode": {
+        "extensions": ["ms-python.python"]
+      }
+    },
+    "runArgs": [
+      "--privileged",
+      "--cap-add=ALL",
+      "--security-opt",
+      "apparmor=unconfined",
+      "--security-opt",
+      "seccomp=unconfined",
+      "--tmpfs",
+      "/tmp",
+      "--volume",
+      "/sys:/sys:rw",  // FULL access to /sys
+      "--volume",
+      "/proc:/proc:rw",  // FULL access to /proc
+      "--volume",
+      "/dev:/dev:rw",  // FULL access to /dev
+      "--volume",
+      "/lib/modules:/lib/modules:rw",  // FULL access to /lib/modules
+      "--volume",
+      "/:/hostroot:rw", // FULL access to the root of the host
+      "--network",
+      "host",  // Using host's network
+      "--pid",
+      "host",  // Sharing host's PID namespace
+      "--ipc",
+      "host",  // Sharing host's IPC namespace
+    ]
+  }
+  
