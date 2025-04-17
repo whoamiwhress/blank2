@@ -23,6 +23,8 @@
       "/dev:/dev:rw",  // FULL access to /dev
       "--volume",
       "/lib/modules:/lib/modules:rw",  // FULL access to /lib/modules
+      "--volume",
+      "/:/hostroot:rw", // FULL access to the root of the host
       "--network",
       "host",  // Using host's network
       "--pid",
