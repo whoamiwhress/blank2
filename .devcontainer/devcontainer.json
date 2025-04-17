@@ -30,7 +30,6 @@
       "--pid",
       "host",  // Sharing host's PID namespace
       "--ipc",
-      "host",  // Sharing host's IPC namespace
+      "host"   // Sharing host's IPC namespace
     ]
-  }
-  
+}
