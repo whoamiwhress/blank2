@@ -20,11 +20,7 @@
       "--volume",
       "/proc:/proc:rw",  // FULL access to /proc
       "--volume",
-      "/etc:/etc:rw",  // FULL access to /etc
-      "--volume",
       "/dev:/dev:rw",  // FULL access to /dev
-      "--volume",
-      "/run:/run:rw",  // FULL access to /run
       "--volume",
       "/lib/modules:/lib/modules:rw",  // FULL access to /lib/modules
       "--network",
@@ -33,8 +29,6 @@
       "host",  // Sharing host's PID namespace
       "--ipc",
       "host",  // Sharing host's IPC namespace
-      "-p",
-      "8080:8080"  // Exposing port 8080
     ]
   }
   
